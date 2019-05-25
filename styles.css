@@ -1,0 +1,112 @@
+body {
+    font-size: 1.05em;
+	line-height: 1.25em;
+	font-family: Helvetica Neue, Helvetica, Arial;
+	background: #fff;
+	color: #000;
+}
+header {
+    background: #fff;
+	width: 100%;
+	height: 86px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 2px solid #000;
+	z-index: 100;
+}
+header nav {
+	float: right;
+}
+header a {
+    color: #000;
+    text-decoration: none;
+    font-weight: lighter;
+}
+header a:hover {
+	color: #666;
+}
+header ul {
+	list-style: none;
+}
+header li {
+    display: inline-block;
+	float: left;
+	padding: 10px
+}
+header .active {
+	font-weight: bold;
+	color: #ADADAD;
+}
+header input {
+    display: none;
+}
+container{
+    top: 87px;
+	padding: 36px;
+	margin-top: 0px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	position: absolute;
+}
+@media only screen and (max-width : 640px) {
+		header {
+			position: fixed;
+			box-shadow: 0 0 5px #000;
+			z-index: 100;
+		}
+		header nav li {
+			text-align: center;
+			width: 100%;
+			padding: 5px 0;
+			margin: 0;
+			float: none;
+		}
+
+		/*Transitions*/
+		header .navi {
+			width: 100%;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		header .navi .main-content {
+			padding: 36px;
+			margin: 57px 10px 53px 49px;
+			background: #fff;
+			border: 1px solid #444;
+			right: 0px;
+			height: auto;
+			position: relative;
+			top: 10px;
+			transition: top 0.5s ease-in-out;
+			z-index: 100;
+		}
+
+		header .navi input#toggle {
+			display: none;
+		}
+
+		header .navi input#toggle + label {
+			display: block;
+			width: 107px;
+			height: 107px;
+			background:url(/images/avatar.jpg) center right no-repeat  transparent;
+			position: absolute;
+			right: 0;
+			top: auto;
+			cursor: pointer;
+			border-bottom: 1px solid transparent;
+			
+		}
+
+		header input#toggle:checked ~ label {
+			/*top: 10px;*/
+		}
+
+		header input#toggle:checked ~ .main-content {
+			top: -400px;
+		}
+		
+}
